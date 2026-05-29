@@ -42,43 +42,43 @@ class Inicio:
 
 class Nosotros:
     def GET(self):
-        return html(NAV + "<h1>Información</h1><p>Detalles sobre nuestra empresa.</p>")
+        return html(NAV + "<h1>Información</h1><p>Esta es mi URL 2.</p>")
 
 class Contacto:
     def GET(self):
-        return html(NAV + "<h1>Contacto</h1><p>Formas de comunicarse con nosotros.</p>")
+        return html(NAV + "<h1>Contacto</h1><p>Esta es mi URL 3.</p>")
 
 class Servicios:
     def GET(self):
-        return html(NAV + "<h1>Lista de Servicios</h1><p>Consulta lo que ofrecemos aquí.</p>")
+        return html(NAV + "<h1>Lista de Servicios</h1><p>Esta es mi URL 4.</p>")
 
 class ServicioDetalle:
     def GET(self, id):
-        return html(NAV + f"<h1>Elemento #{id}</h1><p>Mostrando el detalle del registro seleccionado.</p>")
+        return html(NAV + f"<h1>Elemento #{id}</h1><p>Esta es mi URL 5.</p>")
 
 class Ingresar:
     def GET(self):
-        return html(NAV + "<h1>Ingreso al Sistema</h1><p>Por favor, pon tus datos de usuario.</p>")
+        return html(NAV + "<h1>Ingreso al Sistema</h1><p>Esta es mi URL 6.</p>")
 
 class Salir:
     def GET(self):
-        return html(NAV + "<h1>Cierre de Sesión</h1><p>Has salido del sistema correctamente.</p>")
+        return html(NAV + "<h1>Cierre de Sesión</h1><p>Esta es mi URL 7.</p>")
 
 class CrearCuenta:
     def GET(self):
-        return html(NAV + "<h1>Formulario de Registro</h1><p>Regístrate para obtener beneficios.</p>")
+        return html(NAV + "<h1>Formulario de Registro</h1><p>Esta es mi URL 8.</p>")
 
 class Panel:
     def GET(self):
-        return html(NAV + "<h1>Panel Principal</h1><p>Aquí se muestran las estadísticas generales.</p>")
+        return html(NAV + "<h1>Panel Principal</h1><p>Esta es mi URL 9.</p>")
 
 class MiCuenta:
     def GET(self):
-        return html(NAV + "<h1>Configuración de Cuenta</h1><p>Modifica tus datos personales en esta sección.</p>")
+        return html(NAV + "<h1>Configuración de Cuenta</h1><p>Esta es mi URL 10.</p>")
 
 class Administrador:
     def GET(self):
-        return html(NAV + "<h1>Zona de Control</h1><p>Espacio reservado para los administradores.</p>")
+        return html(NAV + "<h1>Zona de Control</h1><p>Adios.</p>")
 
 if __name__ == "__main__":
     app.run()
