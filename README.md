@@ -53,4 +53,4 @@ Lista de ejercicios con web.py
 
 | No.|Archivo|Descripcion| 
 |--|--|--|
-|1|hello_mundo| Hello word of web.py|
+|1|hola_mundo| Hola mundo en web.py|
