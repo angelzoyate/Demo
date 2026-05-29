@@ -2,7 +2,7 @@ import web
 
 urls = (
     '/', 'Inicio',
-    '/nosotros', 'Nosotros',
+    '/url 2', 'Url 2',
     '/contacto', 'Contacto',
     '/servicios', 'Servicios',
     r'/servicio/(\d+)', 'ServicioDetalle',
@@ -40,7 +40,7 @@ class Inicio:
     def GET(self):
         return html(NAV + "<h1>Página Principal</h1><p>Bienvenido, Hola mundo.</p>")
 
-class Nosotros:
+class Url2:
     def GET(self):
         return html(NAV + "<h1>Información</h1><p>Esta es mi URL 2.</p>")
 
