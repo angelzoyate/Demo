@@ -14,9 +14,9 @@ class Index:
 
 class Calculadora:
     def GET(self):
-        numero_1 = 0
-        numero_2 = 0
-        resultado = 0
+        numero_1 = ""
+        numero_2 = ""
+        resultado = ""
         return render.calculadora(numero_1, numero_2, resultado)
     
     def POST(self):
@@ -24,22 +24,32 @@ class Calculadora:
         numero_1 = int(formulario['numero_1'])
         numero_2 = int(formulario['numero_2'])
         operacion = formulario['operacion']
-
-        # TODO: programar la operación sumar
-        # TODO: programar la operación restar
-        # TODO: programar la operación dividir
-        # TODO: programar la operación multiplicar
-        # TODO: programar la operación raiz cuadrada al numero_1
-        # TODO: programar la operación potencia numero_1 ** numero_2
-        # TODO: programar la operación modulo
-        # TODO: programar la operación limpiar los valores
-
-        resultado =  numero_1 + numero_2
-
-        print(f"El tipo de dato es: {type(numero_1)}")
-
-        return f"Formulario: {formulario}"
-        #return render.calculadora(numero_1, numero_2, resultado)
+        print (operacion)
+        if operacion == "sumar":
+    
+             resultado = numero_1 + numero_2
+             return render.calculadora(numero_1, numero_2,resultado)
+        elif operacion == "restar":
+            resultado = numero_1 - numero_2
+            return render.calculadora(numero_1,numero_2,resultado)
+        elif operacion == "multiplicar":
+            resultado = numero_1 * numero_2
+            return render.calculadora(numero_1, numero_2, resultado)
+        elif operacion == "dividir":
+            resultado = numero_2 != 0 and numero_1 / numero_2 or "Error"
+            return render.calculadora(numero_1, numero_2, resultado)
+        elif operacion == "raiz cuadrada al numero_1":
+            resultado = numero_1 ** 0.5
+            return render.calculadora(numero_1, numero_2, resultado)
+        elif operacion == "potencia numero_1 ** numero_2":
+            resultado = numero_1 ** numero_2
+            return render.calculadora(numero_1, numero_2, resultado)
+        elif operacion == "modulo":
+            resultado = numero_1 % numero_2
+            return render.calculadora(numero_1, numero_2, resultado)
+        elif operacion == "limpiar los valores":
+            numero_1, numero_2, resultado = "", "", ""
+            return render.calculadora(numero_1, numero_2, resultado)
 
 if __name__ == "__main__":
     app.run()
